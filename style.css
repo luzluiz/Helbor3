@@ -1,0 +1,313 @@
+
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Cores principais */
+:root {
+    --background-dark: #1a1a1a;
+    --text-light: #f4f4f4;
+    --accent-color: #4caf50;
+    --accent-hover: #3e8e41;
+}
+
+/* Corpo geral */
+body {
+    font-family: 'Arial', sans-serif;
+    background: var(--background-dark);
+    color: var(--text-light);
+    line-height: 1.6;
+}
+
+
+
+/* Hero Section */
+
+.hero {
+   
+    background-image: url('img/frente1.jpg'); /* Caminho da imagem de fundo */
+    background-size: cover; /* Faz a imagem cobrir toda a área */
+    background-position: center; /* Centraliza a imagem */
+    background-repeat: no-repeat; /* Impede que a imagem se repita */
+    height: auto; /* Deixe a altura do header automática, ou defina um valor fixo se necessário */
+    padding: 20px; /* Adiciona algum espaçamento ao redor do conteúdo */
+    color: white; /* Define a cor do texto para contraste com a imagem */
+    text-align: left; /* Alinha o texto à esquerda */
+}
+
+.hero-content{
+    text-align: center;
+    font-size: 3rem;
+    margin-top: 50px;  /* Move o título 50px para baixo */
+}
+
+.hero-content h2 {
+    font-size: 3rem;
+    margin-top: 20px;  /* Ajusta a margem superior */
+}
+
+.hero-content p {
+    font-size: 1.25rem;
+    margin-top: 500px;  /* Ajusta a margem superior */
+}
+
+.hero .btn {
+    background-color: #006919; /* Cor de fundo do botão */
+    padding: 10px 20px;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.hero .btn:hover {
+    background-color: #029725; /* Cor de fundo do botão ao passar o mouse */
+}
+
+
+.logo {
+    font-size: 30px;
+    font-weight: bold; /* Torna a fonte mais destacada */
+    background: linear-gradient(135deg, #060606, #037d09); /* Degradê verde */
+    -webkit-background-clip: text; /* Define o degradê como clip para o texto */
+    -webkit-text-fill-color: transparent; /* Torna a cor do texto transparente para exibir o degradê */
+       
+}
+
+.logo span {
+    color: var(--accent-color);
+}
+
+
+
+.navbar {
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background: linear-gradient(135deg, #d3d3d3, #6b6868); /* Gradiente de cinza */
+}
+
+
+ .nav-links {
+        display: flex; /* Mantém os itens alinhados */
+        gap: 10px; /* Espaçamento entre os botões */
+        list-style: none; /* Remove marcadores de lista */
+        padding: 0;
+        margin: 0;
+   }
+
+
+.nav-links a {
+    text-decoration: none; /* Remove sublinhado */
+    color: #fff; /* Cor do texto */
+    font-size: 1rem; /* Tamanho da fonte */
+    font-weight: bold; /* Deixa o texto em negrito */
+    padding: 10px 20px; /* Adiciona espaçamento interno */
+    border-radius: 25px; /* Bordas arredondadas */
+    background: linear-gradient(135deg, #006904, #333333); /* Degradê verde */
+    transition: all 0.3s ease; /* Transição suave */
+}
+.nav-links a:hover {
+    background: linear-gradient(135deg, #016d06, #66BB6A); /* Degradê mais claro */
+    transform: scale(1.1); /* Ampliação leve */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Adiciona sombra */
+}
+
+
+
+.hero-content h2 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.hero-content p {
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+.btn {
+    padding: 10px 20px;
+    background: var(--accent-color);
+    color: var(--text-light);
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 18px;
+    transition: background 0.3s ease;
+}
+
+.btn:hover {
+    background: var(--accent-hover);
+}
+
+
+#location {
+    text-align: center;
+    padding: 20px;
+}
+
+.map-container iframe {
+    width: 100%;
+    max-width: 900px;  /* Limita a largura máxima */
+    height: 500px;
+    border: 2;
+}
+
+/* Seçõesv.1 */
+/* Estilo para a seção de serviços */
+#services {
+    text-align: center;
+    padding: 50px 0;
+    background-color: #333; /* Cor de fundo escura para a seção */
+}
+
+#services h2 {
+    color: #fff;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+/* Estilo para os cartões de serviço */
+.service-cards {
+    display: flex;
+    justify-content: center;
+    gap: 30px; /* Espaçamento entre os cards */
+    flex-wrap: wrap;
+}
+
+.card {
+    width: 280px;
+    height: 300px;
+    background-size: cover; /* Ajusta a imagem para cobrir o tamanho do card */
+    background-position: center;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Efeito de escurecimento com uma camada */
+.card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4); /* Cor preta com opacidade para escurecer */
+    z-index: 1;
+}
+
+/* Estilo para o conteúdo dentro de cada card (texto) */
+.card h3, .card p {
+    position: absolute;
+    z-index: 2;
+    color: #fff; /* Texto claro */
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7); /* Sombra para destacar o texto */
+    padding: 20px;
+}
+
+.card h3 {
+    top: 20px;
+    font-size: 1.8em;
+}
+
+.card p {
+    bottom: 20px;
+    font-size: 1.2em;
+}
+
+/* formulario contato v.3 Contêiner que envolve a seção de contato */
+.contact-container {
+    display: flex;
+    justify-content: center;  /* Centraliza horizontalmente */
+    align-items: center;  /* Centraliza verticalmente */
+    height: 40vh;  /* Ocupa toda a altura da janela */
+    padding: 10px;  /* Adiciona um pouco de espaçamento nas laterais */
+}
+
+/* Estilização do formulário */
+#contact-info {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #d3d3d3, #6b6868); /* Gradiente de cinza */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 100%;  /* O formulário pode ocupar toda a largura disponível */
+    max-width: 600px; /* Mas limita a largura a 600px */
+}
+
+#contact-info p {
+    font-size: 1.2rem;
+}
+
+#contact-info a {
+    color: #eff1f0;
+    text-decoration: none;
+}
+
+#contact-info a:hover {
+    color: #005d1f;
+}
+
+#contact-info i {
+    margin-right: 10px;
+    font-size: 1.2rem;
+    color: #005d1f;
+}
+
+
+
+/* Footer */
+.footer {
+    background-color: #222;
+    color: #ecf0f1;
+    padding: 20px;
+    text-align: center;
+}
+
+.footer p {
+    font-size: 1em;
+    margin: 10px 0;
+}
+
+    /* Ajustes para dispositivos móveis */
+
+@media (max-width: 768px) {
+
+
+    header {
+        
+      flex-direction: column;        /* Alinha elementos verticalmente */
+      text-align: center;           /* Centraliza o conteúdo */
+    }
+  
+    .menu ul {
+
+      flex-direction: column;       /* Itens do menu em coluna */
+      gap: 10px;                    /* Ajusta espaçamento entre itens */
+    }
+
+    .navbar {
+        flex-direction: column; /* Empilha logo e menu */
+        text-align: center;
+    }
+
+    .nav-links {
+        flex-direction: column; /* Links em coluna */
+        gap: 10px; /* Ajusta espaçamento entre os links */
+    }
+
+    .nav-links a {
+        display: block; /* Exibe os botões como blocos */
+        width: 100%; /* Botões ocupam toda a largura */
+        text-align: center; /* Centraliza o texto */
+        padding: 15px; /* Aumenta o espaçamento interno */
+        margin-bottom: 10px; /* Espaçamento entre os botões */
+    }
+
+  }

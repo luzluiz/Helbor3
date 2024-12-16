@@ -1,0 +1,212 @@
+
+/* Estilo Escurov.2*/
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #2f2f2f; /* Fundo mais escuro */
+    color: #f1f1f1; /* Cor do texto clara */
+}
+
+/* Estilo para o cabeçalho */
+header {
+    background-color: #1a1a1a; /* Cor de fundo mais escura */
+    color: #fff;
+    padding: 15px 0;
+    text-align: center;
+    
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+}
+
+/* Estilo para os links de navegação */
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #f1f1f1; /* Cor clara para os links */
+    text-decoration: none;
+    font-size: 1.2em;
+}
+
+nav ul li a:hover {
+    text-decoration: none;
+    color: #01661c; /* Cor para o hover */
+}
+
+/* Estilo da seção de pesquisa */
+.search-section {
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Estilo do campo de pesquisa */
+#search-input {
+    width: 60%;
+    padding: 12px;
+    font-size: 16px;
+    margin-top: 10px;
+    border-radius: 5px;
+    border: 1px solid #444; /* Borda mais escura */
+    background-color: #333; /* Fundo escuro no campo de pesquisa */
+    color: #f1f1f1; /* Texto claro no campo de pesquisa */
+    box-sizing: border-box;
+}
+
+#search-input::placeholder {
+    color: #888; /* Cor do texto de placeholder */
+}
+
+/* Estilo para a lista de salas */
+.rooms-list {
+    margin-top: 30px;
+    text-align: center;
+}
+
+/* Estilo para as salas individuais */
+.rooms-list ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.rooms-list li {
+    padding: 12px;
+    margin: 8px 0;
+    border: 1px solid #444; /* Borda escura */
+    border-radius: 5px;
+    background-color: #333; /* Cor de fundo escura para as salas */
+    transition: background-color 0.3s;
+}
+
+.rooms-list li:hover {
+    background-color: #444; /* Cor de fundo mais clara no hover */
+}
+
+/* Estilo para o rodapé */
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #1a1a1a; /* Cor de fundo escura */
+    color: #f1f1f1; /* Texto claro */
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+}
+
+/* Responsividade para o campo de pesquisa */
+@media (max-width: 600px) {
+    #search-input {
+        width: 80%;
+    }
+}
+
+
+
+/* Tema escurov.1 */
+/*
+body {
+    background-color: #121212;
+    color: white;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #333;
+    padding: 15px;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2rem;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    color: #006416;
+}
+
+.search-section {
+    text-align: center;
+    margin: 20px 0;
+}
+
+#search-input {
+    width: 60%;
+    padding: 10px;
+    font-size: 16px;
+    margin-top: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+#search-name, #search-number {
+    padding: 10px;
+    width: 80%;
+    max-width: 600px;
+    font-size: 1.1rem;
+    border: 1px solid #666;
+    border-radius: 5px;
+    background-color: #333;
+    color: white;
+    margin: 5px 0;
+}
+
+.rooms-list {
+    margin: 20px auto;
+    text-align: center;
+}
+
+#room-list {
+    list-style: none;
+    padding: 0;
+}
+
+#room-list li {
+    background-color: #444;
+    margin: 10px 0;
+    padding: 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#room-list li:hover {
+    background-color: #555;
+}
+
+footer {
+    background-color: #333;
+    padding: 10px;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+\\

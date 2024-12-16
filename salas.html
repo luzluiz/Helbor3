@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Salas Comerciais - Helbor Offices</title>
+    <link rel="stylesheet" href="style2.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <h1>Helbor Offices</h1>
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="salas.html">Salas</a></li>
+                <li><a href="#contact">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="search-section">
+        <!-- Campos de pesquisa -->
+        <section class="search-section">
+        <input type="text" id="search-input" placeholder="Pesquisar por nome ou número da sala..." onkeyup="filterRooms()">
+        </section>
+        
+    </section>
+
+    <section class="rooms-list">
+        <ul id="room-list">
+            <li data-name="Odontologia" data-number="Lucas Linhares">Sala 912 - Dr. Lucas Linhares</li>
+            <li data-name="Odontologia" data-number="Marcos">Sala 1720 - Dr. Marcos e Gabriel</li>
+            <li data-name="Estetica" data-number="Rosa">Sala 1115 - Rosa-Estetica</li>
+            <li data-name="Estetica" data-number="Verlane">Sala 2621 - Verlane Mendes</li>
+        </ul>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Helbor Offices. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
