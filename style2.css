@@ -62,6 +62,11 @@ nav ul li a:hover {
     color: #f1f1f1; /* Texto claro no campo de pesquisa */
     box-sizing: border-box;
 }
+.rooms-list {
+    max-height: 60vh;  /* Limita a altura da lista para 60% da altura da tela */
+    overflow-y: auto;  /* Adiciona rolagem vertical quando o conteúdo ultrapassar a altura */
+    margin-bottom: 20px; /* Espaço antes do footer */
+  }
 
 #search-input::placeholder {
     color: #888; /* Cor do texto de placeholder */

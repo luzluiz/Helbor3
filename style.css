@@ -28,7 +28,8 @@ body {
 
 .hero {
    
-    background-image: url('img/frente1.jpg'); /* Caminho da imagem de fundo */
+   
+    background-image: url('img/frente1.JPG'); /* Caminho da imagem de fundo */
     background-size: cover; /* Faz a imagem cobrir toda a área */
     background-position: center; /* Centraliza a imagem */
     background-repeat: no-repeat; /* Impede que a imagem se repita */
@@ -38,10 +39,16 @@ body {
     text-align: left; /* Alinha o texto à esquerda */
 }
 
-.hero-content{
-    text-align: center;
-    font-size: 3rem;
-    margin-top: 50px;  /* Move o título 50px para baixo */
+.styled-box  {
+    background-color: rgba(91, 89, 89, 0.6); /* Fundo preto semi-transparente */
+    border-radius: 10px; /* Bordas arredondadas */
+    padding: 20px; /* Espaçamento interno */
+    box-shadow: 0 4px 6px rgba(78, 78, 78, 0.3); /* Sombra para efeito flutuante */
+    color: white; /* Texto claro */
+    font-size: 1.2rem; /* Tamanho do texto */
+    max-width: 400px; /* Limita a largura da caixa */
+    margin: auto; /* Centraliza horizontalmente */
+    text-align: center; /* Alinha o texto ao centro */
 }
 
 .hero-content h2 {
@@ -50,30 +57,29 @@ body {
 }
 
 .hero-content p {
-    font-size: 1.25rem;
-    margin-top: 500px;  /* Ajusta a margem superior */
+    display: flex;
+  justify-content: center;  /* Alinha o conteúdo horizontalmente */
+  align-items: center;      /* Alinha o conteúdo verticalmente */
+  height: 200px;            /* Definindo uma altura para a caixa */
+  
 }
 
-.hero .btn {
-    background-color: #006919; /* Cor de fundo do botão */
-    padding: 10px 20px;
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
-}
-
-.hero .btn:hover {
-    background-color: #029725; /* Cor de fundo do botão ao passar o mouse */
-}
 
 
 .logo {
-    font-size: 30px;
+    font-size: 50px;
     font-weight: bold; /* Torna a fonte mais destacada */
-    background: linear-gradient(135deg, #060606, #037d09); /* Degradê verde */
+    background: linear-gradient(135deg, #110f0f, #307133); /* Degradê verde */
     -webkit-background-clip: text; /* Define o degradê como clip para o texto */
     -webkit-text-fill-color: transparent; /* Torna a cor do texto transparente para exibir o degradê */
        
+}
+
+.subtitulo{
+    background: linear-gradient(135deg, #110f0f, #307133); /* Degradê verde */
+    -webkit-background-clip: text; /* Define o degradê como clip para o texto */
+    -webkit-text-fill-color: transparent; /* Torna a cor do texto transparente para exibir o degradê */
+    font-weight: bold; /* Torna a fonte mais destacada */
 }
 
 .logo span {
@@ -88,7 +94,7 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 10px 20px;
-    background: linear-gradient(135deg, #d3d3d3, #6b6868); /* Gradiente de cinza */
+    
 }
 
 
@@ -102,17 +108,18 @@ body {
 
 
 .nav-links a {
+    
     text-decoration: none; /* Remove sublinhado */
     color: #fff; /* Cor do texto */
-    font-size: 1rem; /* Tamanho da fonte */
+    font-size: 1.5rem; /* Tamanho da fonte */
     font-weight: bold; /* Deixa o texto em negrito */
     padding: 10px 20px; /* Adiciona espaçamento interno */
-    border-radius: 25px; /* Bordas arredondadas */
-    background: linear-gradient(135deg, #006904, #333333); /* Degradê verde */
-    transition: all 0.3s ease; /* Transição suave */
+    
+    transition: all 0.1s ease; /* Transição suave */
 }
 .nav-links a:hover {
-    background: linear-gradient(135deg, #016d06, #66BB6A); /* Degradê mais claro */
+   
+    
     transform: scale(1.1); /* Ampliação leve */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Adiciona sombra */
 }
@@ -146,6 +153,7 @@ body {
 
 
 #location {
+    background: linear-gradient(135deg, #181717, #6a6b6a); /* Degradê cinza fundo */
     text-align: center;
     padding: 20px;
 }
@@ -156,6 +164,10 @@ body {
     height: 500px;
     border: 2;
 }
+.icon-blue {
+    color: rgb(9, 181, 220);
+}
+
 
 /* Seçõesv.1 */
 /* Estilo para a seção de serviços */
@@ -190,6 +202,18 @@ body {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
+.card h3, .card p {
+    
+    position: absolute;
+    z-index: 2;
+    color: #fff; /* Texto claro */
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7); /* Sombra para destacar o texto */
+    padding: 20px;
+    
+}
+
+
+
 /* Efeito de escurecimento com uma camada */
 .card::before {
     content: '';
@@ -203,23 +227,21 @@ body {
 }
 
 /* Estilo para o conteúdo dentro de cada card (texto) */
-.card h3, .card p {
-    position: absolute;
-    z-index: 2;
-    color: #fff; /* Texto claro */
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7); /* Sombra para destacar o texto */
-    padding: 20px;
-}
+
+
 
 .card h3 {
     top: 20px;
     font-size: 1.8em;
 }
-
-.card p {
-    bottom: 20px;
-    font-size: 1.2em;
+ 
+.card p{
+    
+    font-size: 1.3em;
+    top: 180px;
+    
 }
+
 
 /* formulario contato v.3 Contêiner que envolve a seção de contato */
 .contact-container {
@@ -233,8 +255,9 @@ body {
 /* Estilização do formulário */
 #contact-info {
     font-family: Arial, sans-serif;
-    background: linear-gradient(135deg, #d3d3d3, #6b6868); /* Gradiente de cinza */
-    padding: 20px;
+    background-color: rgba(91, 89, 89, 0.6); /* Fundo preto semi-transparente */
+    border-radius: 10px; /* Bordas arredondadas */
+    padding: 30px;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     width: 100%;  /* O formulário pode ocupar toda a largura disponível */
@@ -251,13 +274,13 @@ body {
 }
 
 #contact-info a:hover {
-    color: #005d1f;
+    color: #228342;
 }
 
 #contact-info i {
     margin-right: 10px;
     font-size: 1.2rem;
-    color: #005d1f;
+    color: #c2e3ce;
 }
 
 
