@@ -253,7 +253,7 @@ body {
 }
 
 /* Estilização do formulário */
-#contact-info {
+#contact {
     font-family: Arial, sans-serif;
     background-color: rgba(91, 89, 89, 0.6); /* Fundo preto semi-transparente */
     border-radius: 10px; /* Bordas arredondadas */
@@ -264,20 +264,20 @@ body {
     max-width: 600px; /* Mas limita a largura a 600px */
 }
 
-#contact-info p {
+#contact p {
     font-size: 1.2rem;
 }
 
-#contact-info a {
+#contact a {
     color: #eff1f0;
     text-decoration: none;
 }
 
-#contact-info a:hover {
+#contact a:hover {
     color: #228342;
 }
 
-#contact-info i {
+#contact i {
     margin-right: 10px;
     font-size: 1.2rem;
     color: #c2e3ce;
