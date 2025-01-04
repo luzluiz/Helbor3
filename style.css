@@ -28,7 +28,7 @@ body {
 
 .hero {
    
-    background-image: url('img/2.1.png'); /* Caminho da imagem de fundo */
+    background-image: url('img/2.3.png'); /* Caminho da imagem de fundo */
     background-size: cover; /* Faz a imagem cobrir toda a área */
     background-position: center; /* Centraliza a imagem */
     background-repeat: no-repeat; /* Impede que a imagem se repita */
@@ -157,12 +157,14 @@ body {
 
 
 #location {
+    
     background: linear-gradient(135deg, #181717, #6a6b6a); /* Degradê cinza fundo */
     text-align: center;
     padding: 20px;
 }
 
 .map-container iframe {
+    
     width: 100%;
     max-width: 900px;  /* Limita a largura máxima */
     height: 500px;
@@ -176,6 +178,7 @@ body {
 /* Seçõesv.1 */
 /* Estilo para a seção de serviços */
 #services {
+    
     text-align: center;
     padding: 50px 0;
     background-color: #333; /* Cor de fundo escura para a seção */
@@ -205,6 +208,7 @@ body {
     position: relative;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
+ 
 
 .card h3, .card p {
     
