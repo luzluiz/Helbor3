@@ -8,10 +8,10 @@
 
 /* Cores principais */
 :root {
-    --background-dark: #1a1a1a;
-    --text-light: #f4f4f4;
+    --background-dark: #000000;
+    --text-light: #ffffff;
     --accent-color: #4caf50;
-    --accent-hover: #3e8e41;
+    --accent-hover: #4caf50;
 }
 
 /* Corpo geral */
@@ -28,28 +28,16 @@ body {
 
 .hero {
    
-   
-    background-image: url('img/frente1.JPG'); /* Caminho da imagem de fundo */
+    background-image: url('img/2.1.png'); /* Caminho da imagem de fundo */
     background-size: cover; /* Faz a imagem cobrir toda a área */
     background-position: center; /* Centraliza a imagem */
     background-repeat: no-repeat; /* Impede que a imagem se repita */
     height: auto; /* Deixe a altura do header automática, ou defina um valor fixo se necessário */
-    padding: 20px; /* Adiciona algum espaçamento ao redor do conteúdo */
-    color: white; /* Define a cor do texto para contraste com a imagem */
-    text-align: left; /* Alinha o texto à esquerda */
+    padding: 120px; /* Adiciona algum espaçamento ao redor do conteúdo */
+   
 }
 
-.styled-box  {
-    background-color: rgba(91, 89, 89, 0.6); /* Fundo preto semi-transparente */
-    border-radius: 10px; /* Bordas arredondadas */
-    padding: 20px; /* Espaçamento interno */
-    box-shadow: 0 4px 6px rgba(78, 78, 78, 0.3); /* Sombra para efeito flutuante */
-    color: white; /* Texto claro */
-    font-size: 1.2rem; /* Tamanho do texto */
-    max-width: 400px; /* Limita a largura da caixa */
-    margin: auto; /* Centraliza horizontalmente */
-    text-align: center; /* Alinha o texto ao centro */
-}
+
 
 .hero-content h2 {
     font-size: 3rem;
@@ -69,7 +57,7 @@ body {
 .logo {
     font-size: 50px;
     font-weight: bold; /* Torna a fonte mais destacada */
-    background: linear-gradient(135deg, #110f0f, #307133); /* Degradê verde */
+    background: black;
     -webkit-background-clip: text; /* Define o degradê como clip para o texto */
     -webkit-text-fill-color: transparent; /* Torna a cor do texto transparente para exibir o degradê */
        
@@ -89,40 +77,56 @@ body {
 
 
 .navbar {
-
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    justify-content: space-between; /* Distribui os elementos */
+    align-items: center; /* Alinha verticalmente */
     padding: 10px 20px;
-    
+    position: relative; /* Necessário para posicionamento absoluto */
 }
 
 
  .nav-links {
-        display: flex; /* Mantém os itens alinhados */
-        gap: 10px; /* Espaçamento entre os botões */
-        list-style: none; /* Remove marcadores de lista */
-        padding: 0;
-        margin: 0;
+    display: flex; /* Padrão: menu visível em telas grandes */
+    gap: 20px;
    }
 
 
-.nav-links a {
-    
-    text-decoration: none; /* Remove sublinhado */
-    color: #fff; /* Cor do texto */
-    font-size: 1.5rem; /* Tamanho da fonte */
-    font-weight: bold; /* Deixa o texto em negrito */
-    padding: 10px 20px; /* Adiciona espaçamento interno */
-    
-    transition: all 0.1s ease; /* Transição suave */
+   /* Menu Links quando o hambúrguer é clicado */
+.nav-links.active {
+    display: block; /* Exibe o menu quando o ícone é ativado */
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background-color: var(--background-dark);
+    width: 100%;
+    padding: 10px;
 }
-.nav-links a:hover {
-   
-    
-    transform: scale(1.1); /* Ampliação leve */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Adiciona sombra */
+
+   .menu-icon {
+    display: none; /* Padrão: escondido em telas maiores */
+    font-size: 40px;
+    cursor: pointer;
+    color: rgb(255, 243, 243);
+    position: absolute; /* Permite posicionamento no canto */
+    top: 10px; /* Ajuste para alinhar verticalmente */
+    right: 20px; /* Ajuste para alinhar horizontalmente */
 }
+
+    
+    .nav-links a {
+        text-decoration: none;
+        color: #fff;
+        font-size: 1.5rem;
+        font-weight: bold;
+        padding: 10px 20px;
+        transition: all 0.1s ease;
+    }
+
+    .nav-links a:hover {
+        transform: scale(1.1);
+        box-shadow: 0 4px 6px rgba(255, 255, 255, 0.2);
+    }
+    
 
 
 
@@ -269,7 +273,7 @@ body {
 }
 
 #contact a {
-    color: #eff1f0;
+    color: #ffffff;
     text-decoration: none;
 }
 
@@ -280,7 +284,7 @@ body {
 #contact i {
     margin-right: 10px;
     font-size: 1.2rem;
-    color: #c2e3ce;
+    color: #4caf50;
 }
 
 
@@ -302,12 +306,29 @@ body {
 
 @media (max-width: 768px) {
 
+     .hero{
+        padding: 35px;
+     }
 
     header {
         
       flex-direction: column;        /* Alinha elementos verticalmente */
       text-align: center;           /* Centraliza o conteúdo */
     }
+
+    
+
+    .logo {
+        font-size: 2.0rem; /* Tamanho menor para o título */
+        text-align: center; /* Centraliza o título em telas pequenas */
+    }
+
+    .subtitulo {
+        font-size: 1.0rem; /* Tamanho menor para o subtítulo */
+        
+        margin-top: 5px; /* Ajusta o espaçamento */
+    }
+}
   
     .menu ul {
 
@@ -316,21 +337,41 @@ body {
     }
 
     .navbar {
+        width: 100%; /* Garante que a faixa ocupe toda a largura */
         flex-direction: column; /* Empilha logo e menu */
         text-align: center;
     }
 
     .nav-links {
-        flex-direction: column; /* Links em coluna */
-        gap: 10px; /* Ajusta espaçamento entre os links */
+        display: none; /* Esconde o menu em telas pequenas até ser ativado */
+        flex-direction: column;
+        background-color: var(--background-dark);
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 100%;
+        max-height: 0;
+        overflow: hidden;
     }
+    
+
+.nav-links.active {
+        display: flex; /* Exibe o menu quando ativado */
+        max-height: 300px; /* Altura máxima quando o menu está aberto */
+    }
+
+    .menu-icon {
+        display: block;
+    }
+
+
 
     .nav-links a {
         display: block; /* Exibe os botões como blocos */
         width: 100%; /* Botões ocupam toda a largura */
         text-align: center; /* Centraliza o texto */
         padding: 15px; /* Aumenta o espaçamento interno */
-        margin-bottom: 10px; /* Espaçamento entre os botões */
+        
     }
 
-  }
+  

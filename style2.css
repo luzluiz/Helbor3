@@ -63,6 +63,7 @@ nav ul li a:hover {
     box-sizing: border-box;
 }
 .rooms-list {
+    
     max-height: 60vh;  /* Limita a altura da lista para 60% da altura da tela */
     overflow-y: auto;  /* Adiciona rolagem vertical quando o conteúdo ultrapassar a altura */
     margin-bottom: 20px; /* Espaço antes do footer */
@@ -75,7 +76,7 @@ nav ul li a:hover {
 /* Estilo para a lista de salas */
 .rooms-list {
     margin-top: 30px;
-    text-align: center;
+    text-align: left;
 }
 
 /* Estilo para as salas individuais */
