@@ -28,7 +28,7 @@ body {
 
 .hero {
    
-    background-image: url('img/2.3.png'); /* Caminho da imagem de fundo */
+    background-image: url('img/fundo3.png'); /* Caminho da imagem de fundo */
     background-size: cover; /* Faz a imagem cobrir toda a área */
     background-position: center; /* Centraliza a imagem */
     background-repeat: no-repeat; /* Impede que a imagem se repita */
@@ -175,8 +175,83 @@ body {
 }
 
 
+.info-container {
+    
+    
+    background-color: #f9f9f9; /* Fundo claro para contraste */
+    border: 1px solid #ddd; /* Bordas sutis */
+    border-radius: 8px; /* Bordas arredondadas */
+    padding: 20px; /* Espaçamento interno */
+    max-width: 400px; /* Largura máxima para centralizar o foco */
+    margin: 20px auto; /* Centraliza o elemento horizontalmente */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Efeito de sombra suave */
+    font-family: Arial, sans-serif; /* Fonte legível */
+}
+
+.info-container h3 {
+    font-size: 1.5rem; /* Tamanho do título */
+    color: #333; /* Cor escura para destaque */
+    margin-bottom: 10px; /* Espaço abaixo do título */
+}
+
+.info-container ul {
+    list-style: none;
+    text-align: left;
+    
+    padding-left: 20px; /* Recuo para alinhamento dos itens */
+    margin: 0; /* Remove margens padrão */
+}
+
+.info-container li {
+    font-size: 1rem; /* Tamanho do texto dos itens */
+    color: #555; /* Cor cinza suave */
+    line-height: 1.6; /* Espaçamento entre linhas */
+    margin-bottom: 8px; /* Espaçamento entre itens */
+}
+
+.info-container li:last-child {
+    margin-bottom: 0; /* Remove margem do último item */
+}
+
+
+.info-container i {
+    color: #030303; /* Vermelho para o ícone de localização */
+    margin-right: 8px; /* Espaço entre o ícone e o texto */
+}
+
 /* Seçõesv.1 */
 /* Estilo para a seção de serviços */
+
+.carousel-buttons {
+
+    display: flex;
+    justify-content: space-between;
+    margin: 10px;
+}
+
+.carousel-buttons button {
+    
+    color: rgb(246, 243, 243);
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 1.5em;
+    box-shadow: 0 4px 6px rgba(105, 105, 105, 0.1);
+}
+
+.carousel-buttons button:hover {
+    background: var(--accent-hover);
+}
+
+
+.service-cards-container {
+    overflow-x: auto; /* Permite rolagem horizontal */
+    display: flex;
+    scroll-behavior: smooth; /* Rolagem suave */
+}
+
+
 #services {
     
     text-align: center;
@@ -190,23 +265,23 @@ body {
     margin-bottom: 20px;
 }
 
-/* Estilo para os cartões de serviço */
-.service-cards {
-    display: flex;
-    justify-content: center;
-    gap: 30px; /* Espaçamento entre os cards */
-    flex-wrap: wrap;
+.services-cards {
+    display: flex; /* Alinha os itens horizontalmente */
+    overflow-x: auto; /* Adiciona barra de rolagem horizontal */
+    gap: 20px; /* Espaçamento entre os cards */
+    padding: 10px;
+    scroll-behavior: smooth; /* Rolagem suave */
 }
 
 .card {
-    width: 280px;
-    height: 300px;
-    background-size: cover; /* Ajusta a imagem para cobrir o tamanho do card */
-    background-position: center;
-    border-radius: 10px;
-    overflow: hidden;
+    flex-shrink: 0; /* Impede que os cards encolham */
+    width: 300px; /* Define a largura dos cards */
+    height: 300px; /* Define a altura dos cards */
+    background-size: cover; /* Faz com que a imagem de fundo cubra o card */
+    background-position: center; /* Centraliza a imagem de fundo */
+    border-radius: 10px; /* Bordas arredondadas */
     position: relative;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra nos cards */
 }
  
 
@@ -282,13 +357,13 @@ body {
 }
 
 #contact a:hover {
-    color: #228342;
+    color: #0d0e0d;
 }
 
 #contact i {
     margin-right: 10px;
     font-size: 1.2rem;
-    color: #4caf50;
+    color: #f3f0f0;
 }
 
 

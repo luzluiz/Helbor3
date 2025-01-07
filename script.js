@@ -25,3 +25,12 @@ function toggleMenu() {
 }
 
 
+function scrollLeft() {
+    const container = document.querySelector('.service-cards-container');
+    container.scrollBy({ left: -300, behavior: 'smooth' }); // Ajuste 300 para a largura desejada
+}
+
+function scrollRight() {
+    const container = document.querySelector('.service-cards-container');
+    container.scrollBy({ left: 300, behavior: 'smooth' });
+}
