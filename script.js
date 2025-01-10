@@ -9,6 +9,8 @@ function filterRooms() {
         let room = rooms[i];
         let roomName = room.getAttribute('data-name').toLowerCase(); // Nome da sala
         let roomNumber = room.getAttribute('data-number').toLowerCase(); // Número da sala
+        
+
 
         // Verifica se o valor de pesquisa corresponde ao nome ou número da sala
         if (roomName.indexOf(searchValue) > -1 || roomNumber.indexOf(searchValue) > -1) {
@@ -34,3 +36,15 @@ function scrollRight() {
     const container = document.querySelector('.service-cards-container');
     container.scrollBy({ left: 300, behavior: 'smooth' });
 }
+
+// Quando a página carregar
+document.addEventListener("DOMContentLoaded", function() {
+    // Adiciona a classe "visible" à seção de informações do prédio
+    const buildingInfo = document.querySelector('.building-info');
+    buildingInfo.classList.add('visible');
+
+    // Adiciona a classe "visible" à seção de localização
+    const locationSection = document.querySelector('#location');
+    locationSection.classList.add('visible');
+});
+

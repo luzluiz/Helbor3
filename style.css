@@ -152,6 +152,13 @@ body {
     justify-content: center;
     align-items: center;
     text-align: left;
+    opacity: 0; /* Inicialmente invisível */
+    transform: translateX(-100%); /* Inicia fora da tela à esquerda */
+    transition: transform 1s ease, opacity 1s ease; /* Transição suave */
+}
+.building-info.visible {
+    opacity: 1; /* Torna visível */
+    transform: translateX(0); /* Move para a posição original */
 }
 
 .info-content {
@@ -282,64 +289,79 @@ body {
     
     background: linear-gradient(135deg, #181717, #6a6b6a); /* Degradê cinza fundo */
     text-align: center;
-    padding: 20px;
+    padding: 50px 20px;
+    opacity: 0; /* Inicialmente invisível */
+    transform: translateX(-100%); /* Inicia fora da tela à esquerda */
+    transition: transform 1s ease, opacity 1s ease; /* Transição suave */
+}
+#location.visible {
+    opacity: 1; /* Torna visível */
+    transform: translateX(0); /* Move para a posição original */
+}
+.map-info-container {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 30px;
+    flex-wrap: wrap;
+}
+
+.map-container {
+    flex: 1;
+    max-width: 900px;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra suave ao redor do mapa */
+    background-color: #fff;
 }
 
 .map-container iframe {
-    
     width: 100%;
-    max-width: 900px;  /* Limita a largura máxima */
     height: 500px;
-    border: 2;
+    border: 0;
 }
+
+.info-container {
+    flex: 1;
+    max-width: 400px;
+    background-color: rgba(31, 31, 31, 0.8); /* Fundo escuro com transparência */
+    color: #fdfefd; /* Cor do texto */
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+}
+
+.info-container h3 {
+    font-size: 1.6rem;
+    margin-bottom: 20px;
+    color: rgb(250, 250, 250); /* Cor azul para o título */
+}
+
+.info-container ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.info-container li {
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.2rem;
+}
+
+.info-container li i {
+    color: rgb(9, 181, 220); /* Cor azul para os ícones */
+    font-size: 1.3rem;
+}
+
 .icon-blue {
     color: rgb(9, 181, 220);
 }
 
-
-.info-container {
-    
-    
-    background-color: #f9f9f9; /* Fundo claro para contraste */
-    border: 1px solid #ddd; /* Bordas sutis */
-    border-radius: 8px; /* Bordas arredondadas */
-    padding: 20px; /* Espaçamento interno */
-    max-width: 400px; /* Largura máxima para centralizar o foco */
-    margin: 20px auto; /* Centraliza o elemento horizontalmente */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Efeito de sombra suave */
-    font-family: Arial, sans-serif; /* Fonte legível */
-}
-
-.info-container h3 {
-    font-size: 1.5rem; /* Tamanho do título */
-    color: #333; /* Cor escura para destaque */
-    margin-bottom: 10px; /* Espaço abaixo do título */
-}
-
-.info-container ul {
-    list-style: none;
-    text-align: left;
-    
-    padding-left: 20px; /* Recuo para alinhamento dos itens */
-    margin: 0; /* Remove margens padrão */
-}
-
-.info-container li {
-    font-size: 1rem; /* Tamanho do texto dos itens */
-    color: #555; /* Cor cinza suave */
-    line-height: 1.6; /* Espaçamento entre linhas */
-    margin-bottom: 8px; /* Espaçamento entre itens */
-}
-
-.info-container li:last-child {
-    margin-bottom: 0; /* Remove margem do último item */
-}
-
-
-.info-container i {
-    color: #030303; /* Vermelho para o ícone de localização */
-    margin-right: 8px; /* Espaço entre o ícone e o texto */
-}
 
 /* Seçõesv.1 */
 /* Estilo para a seção de serviços */
