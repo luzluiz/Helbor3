@@ -103,6 +103,32 @@ nav ul li a:hover {
     color: yellow;
 }
 
+#load-more-btn {
+    width: 100%; /* O botão ocupa toda a largura da tela */
+    padding: 15px; /* Aumenta o padding para dar mais espaço ao botão */
+    background: linear-gradient(135deg, #2d2b2b 0%, #565656 100%); /* Sombreado claro no fundo */
+
+    color: rgb(242, 242, 62);
+    border: 2px solid #808080; /* Borda cinza */
+    border-radius: 5px; /* Bordas arredondadas */
+    font-size: 18px; /* Tamanho maior para o texto */
+    font-weight: bold; /* Deixa o texto em negrito */
+    cursor: pointer;
+    text-align: center; /* Alinha o texto no centro */
+    transition: all 0.3s ease; /* Animação suave para transições */
+}
+
+#load-more-btn:hover {
+    background: linear-gradient(135deg, #a9a9a9, #7d7d7d); /* Alteração no gradiente no hover */
+    border-color: #333; /* Muda a cor da borda ao passar o mouse */
+    transform: scale(1.05); /* Leve aumento de tamanho quando o botão for hover */
+}
+
+#load-more-btn:active {
+    background: #808080; /* Cor sólida de fundo quando o botão é clicado */
+    transform: scale(0.98); /* Leve redução de tamanho quando pressionado */
+}
+
 
 .separator-line {
     width: 100%;

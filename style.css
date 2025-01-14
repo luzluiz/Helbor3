@@ -366,6 +366,90 @@ text-align: center;
 }
 
 
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.7);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background: linear-gradient(135deg, #181717, #6a6b6a); /* Degradê cinza fundo */
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 600px;
+    border-radius: 10px;
+    position: relative;
+}
+
+.close {
+    color: #aaa;
+    position: absolute;
+    top: 10px;
+    right: 25px;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.image-gallery {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.image-gallery img {
+    max-width: 100%;
+    max-height: 300px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+
+.image-gallery button {
+    background-color: rgba(0, 0, 0, 0.5); /* Fundo semi-transparente */
+    color: #fff; /* Cor do texto */
+    border: none; /* Remove borda */
+    border-radius: 50%; /* Botão circular */
+    width: 40px; /* Largura do botão */
+    height: 40px; /* Altura do botão */
+    font-size: 1.5rem; /* Tamanho da seta */
+    display: flex; /* Alinha o conteúdo centralmente */
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+    cursor: pointer; /* Mostra cursor de clique */
+    transition: background-color 0.3s ease; /* Transição suave no hover */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Sombra leve */
+}
+
+.image-gallery button:hover {
+    background-color: rgba(0, 0, 0, 0.8); /* Fundo mais escuro ao passar o mouse */
+}
+
+.service-cards-container {
+    display: flex;
+    overflow-x: auto; /* Adiciona rolagem horizontal */
+    scroll-behavior: smooth; /* Rolagem suave */
+    gap: 20px; /* Espaçamento entre os cards */
+    padding: 10px;
+}
+
+.service-cards-container::-webkit-scrollbar {
+    display: none; /* Oculta a barra de rolagem no navegador */
+}
+
+
 /* Seçõesv.1 */
 /* Estilo para a seção de serviços */
 
@@ -422,15 +506,20 @@ text-align: center;
 
 .card {
     flex-shrink: 0; /* Impede que os cards encolham */
-    width: 300px; /* Define a largura dos cards */
-    height: 300px; /* Define a altura dos cards */
+    width: 300px; /* Largura dos cards */
+    height: 300px; /* Altura dos cards */
     background-size: cover; /* Faz com que a imagem de fundo cubra o card */
     background-position: center; /* Centraliza a imagem de fundo */
     border-radius: 10px; /* Bordas arredondadas */
-    position: relative;
+    position: relative; /* Necessário para posicionamento do conteúdo interno */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra nos cards */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Adiciona transição suave */
 }
  
+.card:hover {
+    transform: scale(1.05); /* Aumenta o tamanho em 5% */
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); /* Intensifica a sombra */
+}
 
 .card h3, .card p {
     
@@ -516,22 +605,44 @@ text-align: center;
 
 
 
-/* Footer */
+
+
+
 .footer {
-    background-color: #222;
-    color: #ecf0f1;
+    display: flex; /* Usa flexbox para alinhar os elementos na mesma linha */
+    justify-content: space-between; /* Distribui os elementos entre os dois extremos */
+    align-items: center; /* Alinha verticalmente os itens */
     padding: 20px;
-    text-align: center;
+    background-color: #191919;
 }
 
-.footer p {
-    font-size: 1em;
-    margin: 10px 0;
+.footer .copyright {
+    font-size: 14px;
+    color: #ffffff;
 }
 
+.footer .developer {
+    font-size: 16px;
+    color: #ffffff;
+    font-weight: bold; /* Deixa a frase "Desenvolvido por" em negrito */
+    text-align: right; /* Alinha o texto à direita */
+    display: flex;
+    align-items: center; /* Alinha verticalmente o texto e a imagem */
+}
+
+.footer .developer a {
+    text-decoration: none;
+}
+
+.footer .developer img {
+    width: 100px; /* Ajuste o tamanho conforme necessário */
+    height: auto;
+    margin-left: 5px; /* Espaçamento entre o nome e a imagem */
+}
     /* Ajustes para dispositivos móveis */
 
 @media (max-width: 768px) {
+    
 
      .hero{
         padding: 35px;
@@ -635,7 +746,7 @@ text-align: center;
     .detail span {
         font-size: 1rem; /* Ajusta o tamanho do texto */
     }
-
+    
    
     @media (max-width: 768px) {
         .map-info-container {

@@ -82,58 +82,26 @@
         </div>
     </section>
 
-
-
-
-
-
-
-
-
-
-
-
-  <!--  <section id="location">
-        <section id="about" class="about">
-       <!---- <h2>Sobre Nós</h2>
-        <p>Localizado no coração da cid<ade, oferecemos um espaço empresarial moderno, equipado com as melhores tecnologias e um ambiente inspirador.</p>
-        
-    
-        <h2> <i class="fas fa-map-marker-alt icon-blue"></i>  Confira onde estamos localizados:</h2>
-        <div class="map-container">
-            <iframe 
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3645.8051815627023!2d-46.32691742465737!3d-23.967328278523027!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce03a9ff65e6f3%3A0x49f62adccdad0c26!2sHelbor%20Offices%20Vila%20Rica!5e0!3m2!1spt-BR!2sbr!4v1734141258639!5m2!1spt-BR!2sbr"
-                width="50%" 
-                height="500px" 
-                style="border:1;" 
-                allowfullscreen="" 
-                loading="lazy">
-            </iframe>
-        </div>
-    </section>
--->
     
     <section id="services" class="services">
         <h2>Nossos Serviços</h2>
 
 
-       
-
 
         <div class="service-cards-container">
             <div class="services-cards">
-            <div class="card" style="background-image: url('img/estacionamento1.JPG');">
-                <h3>Estacionamento Estapar</h3>
-                <p>Entrada à esquerda pelo Subsolo</p>
-            </div>
-            <div class="card" style="background-image: url('img/triocafe.JPG');">
-                <h3>Trio Cafeteria</h3>
-                <p>Segunda a Sexta</p>
-            </div>
-            <div class="card" style="background-image: url('img/auditorios.jpg');">
-                <h3>Salas de Reunião</h3>
-                <p>Ambientes equipados para reuniões e eventos</p>
-            </div>
+                <div class="card" style="background-image: url('img/estacionamento1.JPG');" onclick="openModal(0)">
+                    <h3>Estacionamento Estapar</h3>
+                    <p>Entrada à esquerda pelo Subsolo</p>
+                </div>
+                <div class="card" style="background-image: url('img/triocafe.JPG');" onclick="openModal(1)">
+                    <h3>Trio Cafeteria</h3>
+                    <p></p>
+                </div>
+                <div class="card" style="background-image: url('img/auditorios.jpg');" onclick="openModal(2)">
+                    <h3>Salas de Reunião</h3>
+                    <p>Ambientes equipados para reuniões e eventos</p>
+                </div>
             <div class="card" style="background-image: url('img/recepcao1.JPG');">
                 <h3>Recepção do Edifício</h3>
                 <p>Atendimento 24 horas por dia</p>
@@ -146,7 +114,25 @@
                 </div>
             </div>
         </div>
+        <div id="service-modal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal()">&times;</span>
+                <h2 id="modal-title">Título do Serviço</h2>
+                <p id="modal-description">Descrição detalhada do serviço.</p>
+                <h3>Horários:</h3>
+                <p id="modal-hours">Segunda a Sexta: 08:00 - 18:00</p>
+        
+                <!-- Galeria de imagens -->
+                <div class="image-gallery">
+                    <button class="prev" onclick="changeImage(-1)">&#8249;</button>
+                    <img id="gallery-image" src="img/estacionamento1.JPG" alt="Galeria de Imagens">
+                    <button class="next" onclick="changeImage(1)">&#8250;</button>
+                </div>
+            </div>
+        </div>
+        
     </section>
+   
     
     
 
@@ -164,9 +150,12 @@
     
     
 
-    <footer class="footer">
-        <p>© 2024 Helbor Offices. Todos os direitos reservados.</p>
-    </footer>
+        <footer class="footer">
+            <p class="copyright">© 2025 Helbor Offices. Todos os direitos reservados.</p>
+            <p class="developer">
+                Desenvolvido por: <a href="https://www.instagram.com/devluizluz?igsh=c2d1aXhnNmt6aWpv&utm_source=qr" target="_blank"><img src="img/logoll.png" alt=""></a>
+            </p>
+        </footer>
 
 
     <script src="script.js"></script>
