@@ -53,20 +53,20 @@ const serviceData = [
     {
         title: 'Estacionamento Estapar',
         description: 'Entrada pelo subsolo à esquerda.',
-        hours: '',
-        images: ['img/estacionamento1.JPG', 'img/estacionamento2.JPG', 'img/estaparplaca.jpg'],
+        hours: ' Telefone Sac: 0800 10 5560',
+        images: ['img/estacionamento1.JPG'],
     },
     {
         title: 'Trio Cafeteria',
         description: 'Cafés especiais e refeições rápidas.',
         hours: 'Segunda a Sexta: 07:00 - 19:00',
-        images: ['img/triocafe.JPG', 'img/cafe1.jpg'],
+        images: ['img/triocafe.JPG'],
     },
     {
         title: 'Salas de Reunião',
         description: 'Espaços modernos para reuniões e eventos locado apenas para condôminos.',
         hours: 'Sob agendamento.',
-        images: ['img/auditorios.jpg', 'img/aud2.avif', 'img/aud3.avif'],
+        images: ['img/auditorio1.jpg', 'img/auditorio2.png', 'img/auditorio3.png'],
     },
 ];
 
