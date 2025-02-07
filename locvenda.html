@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Venda e Locação - Helbor Offices</title>
+    <link rel="stylesheet" href="style3.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.css">
+</head>
+<body>
+    <header class="hero">
+        <nav class="navbar">
+            <div class="menu-icon" onclick="toggleMenu()">☰</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Início</a></li>
+            </ul>
+        </nav>
+
+        
+        <div class="hero-content">
+            <h2></h2>
+            <p></p>
+        </div>
+        
+    </header>
+    <div class="separator-line"></div>
+
+  
+
+    <section id="sales" class="sales-section">
+        <h2>Salas Disponíveis</h2>
+        <div class="sales-container">
+            <div class="sale-card">
+                <div class="carousel">
+                    <img src="img/aud3.jpg.avif" alt="Sala Comercial">
+                    <img src="img/cafe1.jpg" alt="Sala Comercial">
+                    <img src="img/hall.jpg" alt="Sala Comercial">
+                </div>
+                <h3>Sala 101</h3>
+                <p>Área: 45m² | Banheiros: 1</p>
+                <p>Preço: R$ 350.000 ou Locação R$ 2.500/mês</p>
+                <p>Contato: <a href="tel:+551399999999">(13) 99999-9999</a></p>
+            </div>
+            <div class="sale-card">
+                <div class="carousel">
+                    <img src="img/teste1.jpg" alt="Sala Comercial">
+                    <img src="img/teste2.jpg" alt="Sala Comercial">
+                    <img src="img/teste3.jpg" alt="Sala Comercial">
+                </div>
+                <h3>Sala 202</h3>
+                <p>Área: 60m² | Banheiros: 2</p>
+                <p>Preço: R$ 450.000 ou Locação R$ 3.200/mês</p>
+                <p>Contato: <a href="tel:+551398888888">(13) 98888-8888</a></p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p class="copyright">© 2025 Helbor Offices. Todos os direitos reservados.</p>
+    </footer>
+
+    <script>
+        $(document).ready(function(){
+            $('.carousel').slick({
+                dots: true,
+                infinite: true,
+                speed: 300,
+                slidesToShow: 1,
+                adaptiveHeight: true,
+                autoplay: true,
+                autoplaySpeed: 3000
+            });
+        });
+    </script>
+</body>
+</html>
